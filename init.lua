@@ -27,18 +27,18 @@ minetest.register_on_joinplayer(function ( pl )
 end)
 
 local bone_pos = {
-    Head = { x=0, y=6.75, z=0 };
-    Arm_Left = { x=-3.9, y=6.5, z=0 };
-    Arm_Right = { x=3.9, y=6.5, z=0 };
-    Leg_Left = { x=-1.15, y=0, z=0 };
-    Leg_Right = { x=1.15, y=0, z=0 };
+    Armature_Head = { x=0, y=6.75, z=0 };
+    Armature_Arm_Left = { x=-3.9, y=6.5, z=0 };
+    Armature_Arm_Right = { x=3.9, y=6.5, z=0 };
+    Armature_Leg_Left = { x=-1.15, y=0, z=0 };
+    Armature_Leg_Right = { x=1.15, y=0, z=0 };
 };
 
-local HEAD = "Head";
-local LARM = "Arm_Left";
-local RARM = "Arm_Right";
-local LLEG = "Leg_Left";
-local RLEG = "Leg_Right";
+local HEAD = "Armature_Head";
+local LARM = "Armature_Arm_Left";
+local RARM = "Armature_Arm_Right";
+local LLEG = "Armature_Leg_Left";
+local RLEG = "Armature_Leg_Right";
 
 local function rotbone ( player, bone, x, y, z )
     player:set_bone_position(bone, bone_pos[bone], { x=x, y=y, z=z });
